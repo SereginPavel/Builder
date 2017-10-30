@@ -11,7 +11,7 @@ if(env.AdditionalRFC != null){
 if (env.JobName != null) props.put('JobName', env.JobName)
 node {
     def workspace = 'C:\\Program Files (x86)\\Jenkins\\workspace\\Init_build@script'
-    def build = load "$workspace\\src\\lib\\OneBuildPr.groovy"
+    def build = load "$workspace\\src\\lib\\OneBuild.groovy"
     timestamps{
         ansiColor('xterm'){
             stage('build'){
