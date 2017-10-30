@@ -11,7 +11,7 @@ if(env.AdditionalRFC != null){
 if (env.JobName != null) props.put('JobName', env.JobName)
 node {
     def workspace = pwd();
-    echo workspace
+    println workspace
     def build = load '/Init_build@script/src/lib/OneBuild.groovy'
     timestamps{
         ansiColor('xterm'){
