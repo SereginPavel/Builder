@@ -2,13 +2,14 @@
  * Created by SerP on 30.10.2017.
  */
 class OneBuild implements Serializable, Runnable{
-    def a = 4;
-    def b = 7;
-    def c;
+    def props;
+    OneBuild(props) {
+        this.props = props
+    }
+
     void run(){
-        c = a+b
-        println(c)
+        build job: "$props.JobName", wait: true
     }
 }
-return new OneBuild()
+return new OneBuild(props)
 
