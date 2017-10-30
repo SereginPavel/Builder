@@ -14,13 +14,14 @@ node {
     println workspace
     workspace = 'C:\\Program Files (x86)\\Jenkins\\workspace\\Init_build@script'
     def build = load "$workspace\\src\\Builder.groovy"
+    def build1 = new Builder(props)
     timestamps{
         ansiColor('xterm'){
             stage('build'){
                 for (def rfc : rfcList){
                     if (props.JobName){
                         //build job: "$props.JobName", wait: true
-                       new Thread(build).start();
+                       new Thread(build1).start();
                     }
                 }
             }

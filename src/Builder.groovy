@@ -3,6 +3,9 @@
  */
 class OneBuild implements Serializable, Runnable{
     def props;
+    OneBuild() {
+    }
+
     OneBuild(props) {
         this.props = props
     }
@@ -11,5 +14,5 @@ class OneBuild implements Serializable, Runnable{
         build job: "$props.JobName", wait: true
     }
 }
-return new OneBuild(props)
+return new OneBuild()
 
