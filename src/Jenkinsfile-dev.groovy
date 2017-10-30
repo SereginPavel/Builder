@@ -1,6 +1,6 @@
 def props = [:]
 def rfcList = []
-
+import groovyx.gpars.GParsPool;
 //
 
 if(env.AdditionalRFC != null){
@@ -12,6 +12,7 @@ if (env.JobName != null) props.put('JobName', env.JobName)
 node {
     def workspace = pwd();
     println workspace
+    def task =[];
     workspace = 'C:\\Program Files (x86)\\Jenkins\\workspace\\Init_build@script'
     def build = load "$workspace\\src\\Builder.groovy"
     timestamps{
@@ -19,10 +20,11 @@ node {
             stage('build'){
                 for (def rfc : rfcList){
                     if (props.JobName){
-                        //build job: "$props.JobName", wait: true
-                        Parallelizer.doParallel {
-                            build job: 'pipeline-jenkins-example', wait: true
-                        }
+                        GParsPool.withPool (100 ,{
+                            task.eachParallel { x ->
+                                build job: 'pipeline-jenkins-example', wait: true
+                            }
+                        })
                        //new Thread(build).start();
                     }
                 }
