@@ -1,6 +1,6 @@
 def props = [:]
 def rfcList = []
-def build = load 'lib/OneBuild.groovy'
+def build = load 'src/lib/OneBuild.groovy'
 
 if(env.AdditionalRFC != null){
     rfcList = env.AdditionalRFC.tokenize(';')
