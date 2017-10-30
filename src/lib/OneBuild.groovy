@@ -8,4 +8,4 @@ class OneBuildPr{
         println 'hello'
     }
 }
-return new lib.OneBuildPr();
+return new lib.OneBuild()
