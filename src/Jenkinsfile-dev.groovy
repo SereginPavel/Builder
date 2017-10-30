@@ -22,7 +22,7 @@ node {
                         //build job: "$props.JobName", wait: true
                        // println 'hello'
                         println build.getClass().name
-                        build.run();
+                        build.test();
                     }
                 }
             }
