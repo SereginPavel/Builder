@@ -1,16 +1,14 @@
 /**
  * Created by SerP on 30.10.2017.
  */
-class OneBuild implements Serializable{
-    def name = 'tester'
+class OneBuild extends Thread implements Serializable{
     def a = 4;
     def b = 7;
-    public def run(){
-        return a+b;
-    }
-
-    static def test(){
-        println 'hello world'
+    def c
+    @Override
+    run(){
+        c = a+b
+        println(c)
     }
 }
 return new OneBuild()

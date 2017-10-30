@@ -20,9 +20,7 @@ node {
                 for (def rfc : rfcList){
                     if (props.JobName){
                         //build job: "$props.JobName", wait: true
-                       println build.name;
-                       println build.run()
-                        build.test();
+                       build.start();
                     }
                 }
             }
