@@ -9,7 +9,7 @@ if(env.AdditionalRFC != null){
 
 if (env.JobName != null) props.put('JobName', env.JobName)
 node {
-    def build = load 'src/lib/OneBuild.groovy'
+    def build = load '/Init_build@script/src/lib/OneBuild.groovy'
     timestamps{
         ansiColor('xterm'){
             stage('build'){
