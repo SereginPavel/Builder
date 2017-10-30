@@ -1,11 +1,11 @@
 package lib
 
 /**
- * Created by SerP on 29.10.2017.
+ * Created by SerP on 30.10.2017.
  */
-class OneBuild {
+class OneBuildPr{
     public def run(){
         println 'hello'
     }
 }
-return new lib.OneBuild();
+return new lib.OneBuildPr();
