@@ -1,6 +1,6 @@
 def props = [:]
 def rfcList = []
-import groovyx.gpars.GParsPool;
+load groovyx.gpars.GParsPool;
 //
 
 if(env.AdditionalRFC != null){
