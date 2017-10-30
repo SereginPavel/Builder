@@ -3,8 +3,10 @@
  */
 class OneBuild implements Serializable{
     def name = 'tester'
+    def a = 4;
+    def b = 7;
     public def run(){
-        println 'hello!!!';
+        return a+b;
     }
 
     static def test(){
