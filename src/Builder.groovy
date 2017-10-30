@@ -3,7 +3,7 @@
  */
 class OneBuild implements Serializable{
     private def run(){
-        println 'hello';
+        println 'hello!!!';
     }
 }
 return new OneBuild()
