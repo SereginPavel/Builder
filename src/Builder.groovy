@@ -6,7 +6,8 @@ class OneBuild implements Serializable{
     public def run(){
         println 'hello!!!';
     }
-    def test(){
+
+    static def test(){
         println 'hello world'
     }
 }
