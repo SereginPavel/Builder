@@ -21,7 +21,7 @@ node {
                     if (props.JobName){
                         //build job: "$props.JobName", wait: true
                        // println 'hello'
-                        println build
+                        println build.getName();
                         build.run();
                     }
                 }
