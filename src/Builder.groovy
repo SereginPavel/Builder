@@ -1,12 +1,11 @@
 /**
  * Created by SerP on 30.10.2017.
  */
-class OneBuild extends Thread implements Serializable{
+class OneBuild implements Serializable, Runnable{
     def a = 4;
     def b = 7;
-    def c
-    @Override
-    run(){
+    def c;
+    void run(){
         c = a+b
         println(c)
     }
