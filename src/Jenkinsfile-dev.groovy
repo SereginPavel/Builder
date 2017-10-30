@@ -20,7 +20,10 @@ node {
                 for (def rfc : rfcList){
                     if (props.JobName){
                         //build job: "$props.JobName", wait: true
-                       new Thread(build).start();
+                        Parallelizer.doParallel {
+                            build job: 'pipeline-jenkins-example', wait: true
+                        }
+                       //new Thread(build).start();
                     }
                 }
             }
