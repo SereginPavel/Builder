@@ -1,6 +1,5 @@
 def props = [:]
 def rfcList = []
-load groovyx.gpars.GParsPool;
 //
 
 if(env.AdditionalRFC != null){
@@ -20,11 +19,7 @@ node {
             stage('build'){
                 for (def rfc : rfcList){
                     if (props.JobName){
-                        GParsPool.withPool (100 ,{
-                            task.eachParallel { x ->
-                                build job: 'pipeline-jenkins-example', wait: true
-                            }
-                        })
+
                        //new Thread(build).start();
                     }
                 }
