@@ -13,5 +13,5 @@ class OneBuild implements Serializable, Runnable{
         })
     }
 }
-return new OneBuild()
+return this
 
