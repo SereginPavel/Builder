@@ -4,4 +4,3 @@
 class OneBuildPr {
 
 }
-return new OneBuildPr();

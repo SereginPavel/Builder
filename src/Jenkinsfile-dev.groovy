@@ -13,7 +13,7 @@ node {
     def workspace = pwd();
     println workspace
     workspace = 'C:\\Program Files (x86)\\Jenkins\\workspace\\Init_build@script'
-    def build = load "$workspace\\src\\OneBuild.groovy"
+    def build = load "$workspace\\src\\OneBuildPr.groovy"
     timestamps{
         ansiColor('xterm'){
             stage('build'){
