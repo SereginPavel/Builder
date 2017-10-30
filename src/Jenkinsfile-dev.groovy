@@ -1,6 +1,6 @@
 def props = [:]
 def rfcList = []
-def build = load 'src/lib/OneBuild.groovy'
+//def build = load 'src/lib/OneBuild.groovy'
 
 if(env.AdditionalRFC != null){
     rfcList = env.AdditionalRFC.tokenize(';')
@@ -15,7 +15,8 @@ node {
                 for (def rfc : rfcList){
                     if (props.JobName){
                         //build job: "$props.JobName", wait: true
-                        build.run();
+                        println 'hello'
+                      //  build.run();
                     }
                 }
             }
